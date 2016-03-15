@@ -30,7 +30,6 @@ public class GameStage extends Stage implements ContactListener {
 	private float accumulator = 0f;
 	
 	private OrthographicCamera camera;
-	//private Box2DDebugRenderer renderer;
 	
 	private Rectangle screenLeftSide;
 	private Rectangle screenRightSide;
@@ -38,7 +37,8 @@ public class GameStage extends Stage implements ContactListener {
 	private Vector3 touchPoint;
 	
 	public GameStage() {
-		super(new ScalingViewport(Scaling.stretch, VIEWPORT_WIDTH, VIEWPORT_HEIGHT, new OrthographicCamera(VIEWPORT_WIDTH, VIEWPORT_HEIGHT)));
+		super(new ScalingViewport(Scaling.stretch, VIEWPORT_WIDTH, VIEWPORT_HEIGHT,
+				new OrthographicCamera(VIEWPORT_WIDTH, VIEWPORT_HEIGHT)));
 		setupWorld();
 		setupCamera();
 		setupTouchControlAreas();
@@ -116,7 +116,6 @@ public class GameStage extends Stage implements ContactListener {
 	@Override
 	public void draw() {
 		super.draw();
-		//renderer.render(world, camera.combined);
 	}
 	
 	@Override

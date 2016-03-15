@@ -32,8 +32,8 @@ public abstract class GameActor extends Actor {
 	public abstract UserData getUserData();
 
 	private void updateRectangle() {
-		screenRectangle.x = transformToScreen(body.getPosition().x - userData.getWidth());
-		screenRectangle.y = transformToScreen(body.getPosition().y - userData.getHeight());
+		screenRectangle.x = transformToScreen(body.getPosition().x - userData.getWidth() / 2);
+		screenRectangle.y = transformToScreen(body.getPosition().y - userData.getHeight() / 2);
 		screenRectangle.width = transformToScreen(userData.getWidth());
 		screenRectangle.height = transformToScreen(userData.getHeight());
 	}
